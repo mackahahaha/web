@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHT Travel web afterLog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../login/style_log.css">
+</head>
+<body>
+
+    <!-- header section start -->
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars">
+            
+        </div>
+
+        <a href="#home" class="logo"><span>D</span>u lịch</a>
+        <nav class="navbar">
+            <a href="#home">Trang chủ</a>
+            <a href="#book">Đặt lịch</a>
+            <a href="#packages">Gói</a>
+            <a href="#services">Dịch vụ</a>
+            <a href="#gallery">Thư viện</a>
+            <a href="#review">nhận xét</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="btn-Search"></i>
+            <a href="../web/index.html">
+                <i class="fas fa-right-from-bracket"></i>
+            </a>
+            
+            <!-- <span id="btn-Account">ducthanh<i class="fas fa-caret-down"></i></span>
+            <ul class="information">
+                <li>
+                    <a href="#">Account</a>
+                </li>
+                <li>
+                    <a href="../homepage/travelWeb.html">Log out</a>
+                </li>
+            </ul> -->
+
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here ...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- header section end -->
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Cuộc đời là những chuyến đi</h3>
+            <p>Khám phá thế giới cùng chúng tôi, những cuộc phiêu lưu đang chờ đợi bạn</p>
+            <a class="btn" id="reqlogin" >Tìm hiểu thêm</a>
+        </div>
+
+        <div class="controls">
+            <span class="btn-Vid active" data-src="../image/video.mp4"></span>
+            <span class="btn-Vid" data-src="../image/video.mp4"></span>
+            <span class="btn-Vid" data-src="../image/video.mp4"></span>
+            <span class="btn-Vid" data-src="../image/video.mp4"></span>
+            <span class="btn-Vid" data-src="../image/video.mp4"></span>
+        </div>
+
+        <div class="video-container">
+            <video src="../image/video.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+
+    </section>
+    <!-- home section ends -->
+
+
+
+
+    <!-- book section starts -->
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>đ</span>
+            <span>ặ</span>
+            <span>t</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>g</span>
+            <span>a</span>
+            <span>y</span>
+        </h1>
+
+        
+        <div class="row">
+
+            <div class="image">
+                <img src="../image/travel.jpg" alt="">
+            </div>
+
+            <form action="" id="nonPackBook" class="booking-container">
+                <div class="inputBox numBox">
+                    <div class="inputBox">
+                        <h3>Bạn muốn đến đâu</h3>
+                        <input type="text" id="PlaceName" placeholder="Tên địa điểm">
+                    </div>
+                    <div class="inputBox">
+                        <h3>Số người</h3>
+                        <input type="number" id="NumGuest" class="numGuest" placeholder="Bạn đi cùng mấy người" min="1">
+                    </div>
+                </div>
+                
+                <div class="inputBox">
+                    <h3>Ngày đi</h3>
+                    <input type="date" id="Arrival">
+                </div>
+                <div class="inputBox">
+                    <h3>Loại vé</h3>
+                    <input type="radio" id="1way" name="type_ticket" value="one way ticket">
+                    <label for="1way">Vé một chiều</label>
+                    <br>
+                    <input type="radio" id="2way" name="type_ticket" value="round-trip ticket" checked="checked">
+                    <label for="2way">Vé hai chiều</label>
+                </div>
+                <div class="inputBox" id="need-or-not">
+                    <h3>Ngày về</h3>
+                    <input type="date" id="leaving">
+                </div>
+                <div class="inputBox priceBox">
+                    <h3>Tổng chi phí</h3>
+                    <label for="totalPrice" class="price">Price: $120</label>
+                    <input type="text" id="totalPrice" class="totalPrice" readonly>  
+                </div>
+                <input type="submit" class="btn" value="Đặt ngay">
+            </form>
+        </div>
+
+    </section>
+    <!-- book section ends -->
+
+
+
+
+    <!-- packages section starts -->
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>c</span>
+            <span>á</span>
+            <span>c</span>
+            <span class="space"></span>
+            <span>g</span>
+            <span>ó</span>
+            <span>i</span>
+            <span class="space"></span>
+            <span>d</span>
+            <span>u</span>
+            <span class="space"></span>
+            <span>l</span>
+            <span>ị</span>
+            <span>c</span>
+            <span>h</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="../image/p-1.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
+                    <p>Mặc dù Mumbai có thể mang đến cảm giác hỗn độn và đông đúc nhưng du khách cũng có thể tìm thấy nhiều khoảnh khắc yên bình ở đây. Nhấm nháp bhelpuri trong phễu giấy trong khi dạo bước trên cát của Bãi biển Chowpatty. Sau đó, đi bộ một quãng ngắn tới Mani Bhavan, nơi Mahatma Gandhi đã từng sống, hoạch định chiến lược và cuối cùng bị bắt giam.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="../book/bookWeb1.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../image/p-2.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> hawaii </h3>
+                    <p>Nằm cách đất liền khoảng 2500 dặm, thế giới thần tiên của Thái Bình Dương này nổi tiếng với những bãi biển ngập nắng, những điểm lướt sóng đẳng cấp thế giới, và nhiều quang cảnh tự nhiên đẹp nhất mà loài người từng biết tới.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="../book/bookWeb2.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../image/p-3.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
+                    <p>Sydney là một thành phố chưa bao giờ thôi mời gọi khách du lịch. Đây là nơi mà đâu đâu cũng có những công trình kiến trúc nguy nga, đồ sộ, thế giới bảo tàng, công viên xanh, những khu vui chơi giải trí hiện đại và cả biển nữa. </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="../book/bookWeb3.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../image/p-4.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+                    <p>Paris – thủ đô hoa lệ của nước Pháp, được xem là một trong những thành phố lãng mạn nhất thế giới. Quả vậy, Paris lại là điểm du lịch ở Pháp mang vẻ đẹp tráng lệ, quyến rũ đến khó diễn tả thành lời. Nơi đây không chỉ hấp dẫn bởi các công trình kiến trúc, viện bảo tàng, các con đường cồ kính, những góc phố rực rỡ mà còn mang đến cho du khách những trải nghiệm khó quên về nền văn hóa ẩm thực tinh tế</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="../book/bookWeb4.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../image/p-5.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
+                    <p>Thủ đô Tokyo không chỉ là linh hồn của đất nước mặt trời mọc mà còn được đánh giá là một trong những thành phố lớn nhất, hiện đại phát triển và đông đúc bậc nhất trên thế giới. Đến với thủ đô tuyệt vời này, du khách sẽ cảm nhận được sự sôi động trong mỗi khoảnh khắc, con đường, hết sức thích hợp cho những vị khách từ phương xa đam mê du lịch khám phá.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $85.00 <span>$120.00</span> </div>
+                    <a href="../book/bookWeb5.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../image/p-6.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> egypt </h3>
+                    <p>Trải nghiệm du lịch Ai Cập dọc theo dòng Sông Nile huyền thoại. Thư giãn trên boong du thuyền Nile 5*, chiêm ngưỡng cuộc sống nông thôn bên bờ biển và cảnh quan tuyệt vời trên dòng sông hùng vĩ. Khám phá những kho báu cổ đại, lịch sử phong phú của Ai Cập trong khi tham quan các kỳ quan các Kim Tự Tháp và đền thờ của Cairo. </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$110.00</span> </div>
+                    <a href="../book/bookWeb6.html" class="btn">Đặt ngay</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- packages section ends -->
+
+
+
+
+    <!-- services section starts -->   
+    <section class="services" id="services">
+
+        <h1 class="heading">
+          <span>d</span>
+            <span>ị</span>
+            <span>c</span>
+            <span>h</span>
+            <span class="space"></span>
+            <span>v</span>
+            <span>ụ</span>
+
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>Khách sạn giá rẻ</h3>
+                <p>Cùng nhiều ưu đãi cho bạn cùng gia đình</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Đồ ăn uống</h3>
+                <p>Được chuẩn bị một cách cung phu nhất từ những đầu bếp hàng đầu</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Hướng dẫn viên du lịch</h3>
+                <p>Chuyên nghiệp, thân thiện và có trách nhiệm</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>Đi khắp thế giới</h3>
+                <p>Hỗ trợ 40 chi nhánh trên khắp thế giới</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>Đi chuyển nhanh & an toàn</h3>
+                <p>Được đảm bảo với những thiết bị tối tân, cấp phép an toàn</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>Những cuộc phiêu lưu</h3>
+                <p>Hứa hẹn những cuộc vui thú vị, giải trí cho bạn cùng gia đình</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- services section ends -->
+
+
+
+    <!-- gallery section starts -->
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading">
+            <span>t</span>
+            <span>h</span>
+            <span>ư</span>
+            <span class="space"></span>
+            <span>v</span>
+            <span>i</span>
+            <span>ệ</span>
+            <span>n</span>
+            <span class="space"></span>
+            <span>ả</span>
+            <span>n</span>
+            <span>h</span>        
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="../image/g-1.jpg" alt="">
+                <div class="content">
+                    <h3>đảo Nang Yuan</h3>
+                    <p>Thái Lan</p>
+                    <a href="../image/g-1.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-2.jpg" alt="">
+                <div class="content">
+                    <h3>đảo Phi Phi</h3>
+                    <p>Thái Lan</p>
+                    <a href="../image/g-2.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-3.jpg" alt="">
+                <div class="content">
+                    <h3>đền Parthenon</h3>
+                    <p>Hy Lạp</p>
+                    <a href="../image/g-3.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-4.jpg" alt="">
+                <div class="content">
+                    <h3>đền Pura Tanah Lot</h3>
+                    <p>Bali</p>
+                    <a href="../image/g-4.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-5.jpg" alt="">
+                <div class="content">
+                    <h3>tháp nghiêng Pisa</h3>
+                    <p>Ý</p>
+                    <a href="../image/g-5.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-6.jpg" alt="">
+                <div class="content">
+                    <h3>Biển sunset</h3>
+                    <p>Phú Quốc</p>
+                    <a href="../image/g-6.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-7.jpg" alt="">
+                <div class="content">
+                    <h3>Du lịch bằng khinh khí cầu</h3>
+                    <p>Hỗ trợ cho gói premium</p>
+                    <a href="../image/g-7.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-8.jpg" alt="">
+                <div class="content">
+                    <h3>dãy Nallathanniya</h3>
+                    <p>Sri Lanka</p>
+                    <a href="../image/g-8.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../image/g-9.jpg" alt="">
+                <div class="content">
+                    <h3>kim tự tháp Giza</h3>
+                    <p>Ai Cập</p>
+                    <a href="../image/g-9.jpg" target="_blank" class="btn">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- gallery section ends -->
+
+
+
+
+    <!-- review section starts -->
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>n</span>
+            <span>h</span>
+            <span>ậ</span>
+            <span>n</span>
+            <span class="space"></span>
+            <span>x</span>
+            <span>é</span>
+            <span>t</span>
+        </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="../image/tmp.jpg" alt="">
+                        <h3>Trần Anh Dũng</h3>
+                        <p>Website dễ thao tác, đội ngũ chăm sóc khách hàng chuyên nghiệp, tận tâm. Các dịch vụ du lịch đi kèm rất tốt. Thanh toán nhanh, an toàn và tiện lợi</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="../image/tmp4.jpg" alt="">
+                        <h3>Phó Đức Thành</h3>
+                        <p>Giao diện web thân thiện với người dùng, thanh toán đơn giản, tiện lợi. Dịch vụ tốt</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="../image/tmp2.jpg" alt="">
+                        <h3>Thach Minh Quan</h3>
+                        <p>User-friendly UI, lots of travel options and the services are quite great and properly served</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="../image/tmp3.jpg" alt="">
+                        <h3>Đặng Bá Thành</h3>
+                        <p>Website tốt, giao dịch an toàn, dịch vụ tốt</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- review section ends -->
+
+    
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+
+        <h1 class="heading">
+            <span>l</span>
+            <span>i</span>
+            <span>ê</span>
+            <span>n</span>
+            <span class="space"></span>
+            <span>h</span>
+            <span>ệ</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="../image/travel2.jpg" alt="">
+            </div>
+
+            <form action="" id ="contact-form"> Liên hệ ban quản lý
+                <div class="inputBox"> 
+                    <input type="text" placeholder="Chủ đề">
+                </div>
+                <textarea placeholder="Nội dung" name="" id="contact-mess" cols="30" rows="20"></textarea>
+                <input type="submit" class="btn" value="Gửi tin nhắn">
+            </form>
+
+        </div>
+
+    </section>
+    <!-- contact section ends -->
+
+    <!-- brand section -->
+    <section class="brand-container">
+
+        <div class="swiper brand-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../image/1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../image/2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../image/3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../image/4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../image/5.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../image/6.jpg" alt=""></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Về chúng tôi</h3>
+                <p>Tổ chức du lịch uy tín hàng đầu Việt Nam</p>
+            </div>
+            <div class="box">
+                <h3>menu</h3>
+                <a href="#home">Trang chủ</a>
+                <a href="#book">Đặt lịch</a>
+                <a href="#packages">Gói</a>
+                <a href="#services">dịch vụ</a>
+                <a href="#gallery">Thư viện</a>
+                <a href="#review">nhận xét</a>
+                <a href="#contact">liên hệ</a>
+            </div>
+            <div class="box">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">youtube</a>
+            </div>
+
+        </div>
+
+        <h1 class="credit">created by <span>PDT_trum web</span> | all rights reserved! </h1>
+
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../login/login.js"></script>
+</body>
+</html>

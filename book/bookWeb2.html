@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour to Hawaii</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../book/style_bookWeb.css">
+</head>
+<body>
+
+      <!-- header section start -->
+      <header>
+
+        <div id="menu-bar" class="fas fa-bars">
+            
+        </div>
+
+        <a href="../login/login.html#home" class="logo"><span>D</span>u lịch</a>
+        <nav class="navbar">
+            <a href="../login/login.html#home">Trang chủ</a>
+            <a href="../login/login.html#book">Đặt lịch</a>
+            <a href="../login/login.html#packages">Gói</a>
+            <a href="../login/login.html#service">Dịch vụ</a>
+            <a href="../login/login.html#gallery">Thư viện</a>
+            <a href="../login/login.html#review">nhận xét</a>
+            <a href="../login/login.html#contact">Liên hệ</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="btn-Search"></i>
+            <a href="../web/index.html">
+                <i class="fas fa-right-from-bracket"></i>
+            </a>
+            
+            <!-- <span id="btn-Account">ducthanh<i class="fas fa-caret-down"></i></span>
+            <ul class="information">
+                <li>
+                    <a href="#">Account</a>
+                </li>
+                <li>
+                    <a href="../homepage/travelWeb.html">Log out</a>
+                </li>
+            </ul> -->
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here ...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- header section end -->
+
+    <!-- container start -->
+    <section class="container" id="02">
+        <div class="descripsion">
+            <div class="box-image-container">
+                <img src="../image/p-2.jpg" alt="">
+            </div>
+            <div class="content-container">
+                <h3>hawaii</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <b>Lịch trình: </b> Vietnam - Hawaii
+                    </li>
+                    <li>
+                        <tr><i class="fas fa-clock"></i></tr>
+                        <tr><b>Thời gian: </b> 1 ngày</tr>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                        <b>Khởi hành: </b> Mọi lúc
+                    </li>
+                    <li>
+                        <i class="fas fa-plane"></i>
+                        <b>Phương tiện: </b> Máy bay
+                    </li>
+                    <li>
+                        <i class="fas fa-home"></i>
+                        <b>Khách sạn: </b> Standard hotel
+                    </li>
+                </ul>
+            </div>
+            <div class="price-container">
+                <p>Giá tour</p>
+                <span class="giaNguoiLon">$90.00</span>
+            </div>
+        </div>
+        <form action="" id="book">
+            <input type="hidden" name="id_tour" value="01">
+            <div class="input-information">
+                <p>Basic tour price</p>
+                <table class="main-information">
+                    <tr>
+                        <td>Giá người lớn (>= 11 tuổi)</td>
+                        <td>
+                            $<span class="price_adult">90.00</span>
+                            <input type="number" class="numOfAdult" name="numOfAdult"min="1" value="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá trẻ con</td>
+                        <td>
+                            $<span class="price_children">0.00</span>
+                            <input type="number" class="numOfChild" name="numOfChild" min="0" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tổng</td>
+                        <td>
+                            $<span class="price_total">90.00</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="input-information">
+                <p>Liên hệ</p>
+                <table>
+                    <tr>
+                        <td>Ngày đi</td>
+                        <td>
+                            <input type="date" id="date" name="Ngày đi">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Họ tên (*)</td>
+                        <td>
+                            <input type="text" id="fullname" placeholder="Họ tên">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ</td>
+                        <td>
+                            <input type="text" id="address" placeholder="Địa chỉ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại(*)</td>
+                        <td>
+                            <input type="phone" id="phone" placeholder="Số điện thoại">
+                        </td>
+                    </tr>
+                </table>
+                </div>            
+            </div>
+            <div class="input-information">
+                <p>Phương thức thanh toán</p>
+                <input type="radio" class="div1" name="type_money" value="Cash" checked="checked">Trả tiền mặt
+                <br>
+                <input type="radio" class="div2" name="type_money" value="Bank transfer">Chuyển khoản
+            </div>
+            <div class="input-information" id="box-rule">
+                <p>Nội quy</p>
+                <div class="box-rule">
+                    <p>Tuân thủ luật lệ</p>
+                </div>
+            </div>
+            <div class="input-information" id="accept">
+                <input type="checkbox" id ="checkme"> Tôi đồng ý điều khoản và chính sách bảo mật
+            </div>
+            <div class="input-information" id="accept">
+                <input type="submit" class="btn" id="send" value="Đặt ngay">                
+            </div>
+        </form>
+    </section>
+
+
+    <!-- container end -->
+
+
+    <!-- footer section -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Về chúng tôi</h3>
+                <p>Tổ chức du lịch uy tín hàng đầu Việt Nam</p>
+            </div>
+            <div class="box">
+                <h3>menu</h3>
+                <a href="../login/login.html#home">Trang chủ</a>
+                <a href="../login/login.html#book">Đặt lịch</a>
+                <a href="../login/login.html#packages">Gói</a>
+                <a href="../login/login.html#services">Dịch vụ</a>
+                <a href="../login/login.html#gallery">Thư viện</a>
+                <a href="../login/login.html#review">Nhận xét</a>
+                <a href="../login/login.html#contact">Liên hệ</a>
+            </div>
+            <div class="box">
+                <h3>theo dõi chúng tôi</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+                <a href="#">linkedin</a>
+                <a href="#">youtube</a>
+            </div>
+
+        </div>
+
+        <h1 class="credit">created by <span>PDT_trum web</span> | all rights reserved! </h1>
+
+    </section>
+    
+
+    <script src="../book/js_bookWeb.js"></script>
+</body>
+</html>
